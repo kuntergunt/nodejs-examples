@@ -1,4 +1,4 @@
-// async call, return result in web service
+// async http call, do it all async and return result in web service
 let express = require('express');
 let app = express();
 

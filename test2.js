@@ -1,4 +1,7 @@
 
+
+console.log('start line')
+
 // async to sync with async-await
 const asynchronousFunction = async () => {
         return 'huhuu'
@@ -7,11 +10,13 @@ const asynchronousFunction = async () => {
 
 const mainFunction = async () => {
         const result = await asynchronousFunction()
-        return result
+        return result + ' hihii'
 }
 
 
 (async () => {
         let result = await mainFunction()
-        console.log(result)
+        console.log('async ' + result)
 })()
+
+console.log('end line')
