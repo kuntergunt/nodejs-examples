@@ -1,9 +1,10 @@
 // multiple async calls, return result in web service
-let express = require('express');
+import express from 'express';
 let app = express();
 
 
 app.get('/call', async (req, res) => {
+
     try {
         // first async call GET
         const innerCall1 = await fetch('https://reqbin.com/echo/get/json');
@@ -27,6 +28,7 @@ app.get('/call', async (req, res) => {
         if (innerCall2.status >= 400) {
             throw new Error("Bad response from server");
         }
+        
         const content2 = await innerCall2.json();
         content2.outer = content1;
         console.log('2' + JSON.stringify(content2));

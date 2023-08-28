@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true
+    },
+    "files": [
+        "typetest-no-ts-error.js",
+        "typetest-no-check.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*",
+        "typetest-no-ts-excluded"
+    ],
+    "include": [
+        "typetest-no-ts-error.js",
+        "typetest-no-check.js",
+        "typetest-included.js"
+    ]
+}
